@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расчет мощности электронной лампы</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Расчет мощности электронной лампы</h1>
+            <p>Трехфазный переменный ток</p>
+        </div>
+        
+        <div class="content">
+            <div class="input-group">
+                <label for="voltage">Линейное напряжение (U<sub>л</sub>)</label>
+                <div class="input-wrapper">
+                    <input type="number" id="voltage" step="any" placeholder="Введите напряжение">
+                    <span class="unit">В</span>
+                </div>
+                <div class="error-message" id="voltage-error"></div>
+            </div>
+            
+            <div class="input-group">
+                <label for="current">Линейный ток (I<sub>л</sub>)</label>
+                <div class="input-wrapper">
+                    <input type="number" id="current" step="any" placeholder="Введите ток">
+                    <span class="unit">А</span>
+                </div>
+                <div class="error-message" id="current-error"></div>
+            </div>
+            
+            <div class="input-group">
+                <label for="cosphi">Коэффициент мощности (cos φ)</label>
+                <div class="input-wrapper">
+                    <input type="number" id="cosphi" step="0.01" min="0" max="1" value="1.0" placeholder="0.0 - 1.0">
+                    <span class="unit">ед.</span>
+                </div>
+                <div class="error-message" id="cosphi-error"></div>
+            </div>
+            
+            <button class="calculate-btn" id="calculate-btn">
+                Рассчитать мощность
+            </button>
+            
+            <div class="result-container">
+                <div class="result-title">Активная мощность</div>
+                <div class="result-value" id="power-result">0.00</div>
+                <div class="result-unit" id="power-unit">Вт</div>
+            </div>
+            
+            <div class="formula">
+                P = √3 × U<sub>л</sub> × I<sub>л</sub> × cos φ
+            </div>
+        </div>
+    </div>  
+    <script src="script.js"></script>
+</body>
+</html>

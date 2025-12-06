@@ -16,18 +16,7 @@ const SQRT3 = Math.sqrt(3);
         
 
     // Функция форматирования числа
-/*
-function formatNumber(num) {
-    if (num >= 1000) {
-    // Используем экспоненциальную запись для больших чисел
-    return num.toExponential(2);
-    } 
-    else if (num >= 1) {return num.toFixed(2);} 
-    else {
-                return num.toFixed(4);
-        }
-}
-*/       
+      
     // Функция проверки ввода
 function validateInput(value, min = 0, max = Infinity, fieldName = '') {
     const num = parseFloat(value);
